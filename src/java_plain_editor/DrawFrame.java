@@ -37,7 +37,6 @@ public class DrawFrame extends JFrame implements MenuListener, ActionListener,
 	private JMenuBar menuBar = new JMenuBar();
 	private final JTextArea textArea = new JTextArea();
 	private final FontFormatPanel fontPanel = new FontFormatPanel();
-	private final JFrame frameFont = new JFrame();
 	private DocumentFile file = new DocumentFile();
 	private boolean wrap = false;
 	private JScrollPane scrollV = new JScrollPane(this.textArea);

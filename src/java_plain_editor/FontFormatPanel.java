@@ -12,8 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * Class FontFormatPanel uses to set the font of the sext This contains the
- * class PreviewPanel used to preview the choosen options
+ * Class FontFormatPanel uses to set the font of the set This contains the
+ * class PreviewPanel used to preview the chosen options
  * 
  * @author Jorge Aguado
  */
@@ -21,9 +21,9 @@ public class FontFormatPanel extends JPanel {
 	/**
 	 * 
 	 */
-	private JComboBox<String> comboSize;
-	private JComboBox<String> comboBackground;
-	private JComboBox<String> comboLetterColor;
+	private JComboBox<String> comboSize;// Size
+	private JComboBox<String> comboBackground; // Color of Background
+	private JComboBox<String> comboLetterColor;// Color of letter
 	// These sizes shown in a combobox
 	private String sizes[] = { "8", "10", "12", "14", "16", "18", "20", "22",
 	        "24" };
@@ -41,7 +41,7 @@ public class FontFormatPanel extends JPanel {
 	private JLabel labelBackgroundColor = new JLabel("Background Color");
 	private JLabel labelLetterColor = new JLabel("Font Color");
 
-	private int selectedIndexSize = 3;// This is the current size of the text
+	private int selectedIndexSize = 3;// This is the initial size of the text
 	private int preSelectedIndexSize = 3;// This is the preview size of the text
 	private int selectedIndexColorFont = 0;
 	private int preSelectedIndexColorFont = 0;

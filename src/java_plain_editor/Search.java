@@ -38,13 +38,14 @@ public class Search {
 	 *            where it is going to be sought the word
 	 */
 	public Search(JTextArea textArea) {
-		int option = 0;
+		int option = 0; // Option selected in a showOptionDialog
+		// with two buttons  0 - Find next match	 1 - Cancel
 		this.removeHighlights(textArea);
 		String pattern = JOptionPane.showInputDialog(null,
 		        "Enter the word to be searched:", "Search",
 		        JOptionPane.QUESTION_MESSAGE);
 
-		if ((pattern != null) && (pattern != "")) {
+		if ((pattern != null) && (pattern != "")) {// Not null
 			try {
 				pattern = pattern.toUpperCase();
 				Highlighter hilite = textArea.getHighlighter();
@@ -75,8 +76,11 @@ public class Search {
 					hilite.removeAllHighlights();
 					pos += pattern.length();
 				}
+				
+				//We here if the search has finished or the user has selected option = 1 (cancel)
 
-				if (option == 0) {
+				if (option == 0) {// If option is 0 - Find next matches
+					// We have already search in all text
 					JOptionPane.showMessageDialog(null,
 					        "No more matches found", "Search",
 					        JOptionPane.PLAIN_MESSAGE);
@@ -89,7 +93,7 @@ public class Search {
 	}
 
 	/**
-	 * removeHighlights delete all highlighted words
+	 * Delete all highlighted words
 	 */
 	public void removeHighlights(JTextComponent textComp) {
 		Highlighter hilite = textComp.getHighlighter();
